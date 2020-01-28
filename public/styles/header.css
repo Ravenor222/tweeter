@@ -1,0 +1,17 @@
+.headerDiv{
+    height: 400px;
+    width: 100%;
+    text-align:center;
+    background-color: #ffa07a;
+    background-image: url("https://www.transparenttextures.com/patterns/transparent-square-tiles.png");    
+}
+
+.img{
+    position:relative;
+    
+    
+}
+
+header div h2{
+    margin-top: -0.5em;
+}

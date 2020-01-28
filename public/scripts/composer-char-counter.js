@@ -1,8 +1,13 @@
 $(document).ready(function() {
     $("textarea").on("keyup" , function(){
-        console.log(140 - this.value.length);
-        console.log(this);
-       //this is the sentence => console.log(this.value,"2");
-        
+        let example = (140 - this.value.length);
+        $("form").find(".counter").text(example);        
+       if(example < 0) {
+        $("form").find(".counter").css("color", "red");
+
+       } else {
+        $("form").find(".counter").css("color", "#545149");}       
+
+
     })
   });

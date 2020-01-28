@@ -14,7 +14,17 @@
     padding-right:0.5em;
     color:#908b8b
 }
-header div img {
+.hidden {
+    visibility:hidden;
+}
+.tweet-container:hover .hidden{
+    visibility:visible;
+}
+
+.tweet-container:hover {
+    box-shadow: 10px 10px 20px lightgrey;
+}
+.usericon {
     height: 1em;
     width: 1em;
 }
@@ -30,7 +40,7 @@ header div img {
     border-bottom:2px solid #545149;
 }
 
-article footer p{
+article footer div{
     text-align: left;
     margin: 1em;
     font-size: 12px;

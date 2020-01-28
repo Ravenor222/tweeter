@@ -22,7 +22,6 @@
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
     <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
-    <script type="text/javascript" src="/scripts/tweetHover.js"></script>
 
   </head>
 
@@ -57,13 +56,17 @@
     <section >
       <article class = "tweet-container">
         <header>
-          <div class = "name"><img src="/images/pugface.jpg">Newton</div>
-          <div class = "username">@sirIsaac</div>
+          <div class = "name"><img class ="usericon" src="/images/pugface.jpg">Newton</div>
+          <div id = "hide" class = "username hidden">@sirIsaac</div>
         </header>
+        
         <p class="tweetText" >This is my tweet weeeeeee</p>
-        <footer><p>x days ago</p></footer>
-      </article>
 
+        <footer>
+          <div class = "daysAgo">x days ago</div>
+        </footer>
+
+      </article>
     </section>
 
   </main>

@@ -1,7 +1,8 @@
 main textarea{
     outline: 0;
     border: 0;
-    border-bottom: 2px solid black;
+    border-bottom: 2px solid #545149;
+    color : #545149;
     background-color:#f4f1ec;
     width: 100%;
     font-weight:600;

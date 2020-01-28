@@ -1,0 +1,38 @@
+.tweet-container {
+    border: 2px solid #545149;
+    margin-top: 3em;
+}
+.name {
+    float:left;
+    padding-top:0.5em;
+    padding-left: 0.5em;
+}
+.username    {
+
+    float:right;
+    padding-top:0.5em;
+    padding-right:0.5em;
+    color:#908b8b
+}
+header div img {
+    height: 1em;
+    width: 1em;
+}
+
+.tweetText{
+    display:block;
+    font-weight:600;
+    height:2em;
+    margin-top:2.5em;
+    margin-left:2%;
+    text-align:left;
+    width: 96%;
+    border-bottom:2px solid #545149;
+}
+
+article footer p{
+    text-align: left;
+    margin: 1em;
+    font-size: 12px;
+
+}

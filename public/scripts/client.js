@@ -46,7 +46,8 @@ $(() => {
         event.preventDefault();
         let countingNumber = $("textarea").val().length;;
            if(countingNumber > 140 || countingNumber <= 0) {
-               alert("Tweets must be between 1-140 characters!");
+              return alert("Tweets must be between 1-140 characters!");
+
            }
         $.post("/tweets",serial,()=> {
             console.log("nosuccess");

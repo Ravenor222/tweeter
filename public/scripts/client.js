@@ -9,9 +9,17 @@
 $(() => {
 
     const createTweetElement= (tweetObj)=> {
+
+        // const $avatar = $(<div></div>).text(tweetObj.user.avatars);
+        // const $username = $(<div></div>).text(tweetObj.user.name);
+        // const $userhandle = $().text(tweetObj.user.handle);
+        // const $contentText = $(<p></p>).text(tweetObj.content.text);
+        // const $footer = ();
+        // const $daysAgo = timeStamp(tweetObj.created_at);
+
         return `<article class = "tweet">
         <header>
-          <div class = "name"><img class ="usericon" src=${tweetObj.user.avatars}>${tweetObj.user.name}</div>
+          <div class = "name"><img class ="userIcon" src=${tweetObj.user.avatars}>  ${tweetObj.user.name}</div>
           <div id = "hide" class = "username hidden">${tweetObj.user.handle}</div>
         </header>
 
@@ -34,7 +42,7 @@ $(() => {
                 </a>
             </div>
 
-          <div class = "daysAgo">${tweetObj.created_at}</div>
+          <div class = "daysAgo">${timeStamp(tweetObj.created_at)}</div>
         </footer>
 
       </article>`
@@ -42,7 +50,19 @@ $(() => {
     //
     
     //
-  
+    const timeStamp = (time) => {
+    
+         const today = new Date();
+         const day = new Date(time);
+         const daysAgo = today.getDate() - day.getDate();
+        
+         if(daysAgo === 0) {
+             return "Posted Today";
+         } else {
+             return `Posted ${today.getDate() - day.getDate()} days ago`
+         }
+    }
+
     const renderTweets = (tweets) => {
             for(const items of tweets) {
                 $('.tweets-container').prepend(createTweetElement(items));
@@ -53,20 +73,20 @@ $(() => {
             renderTweets(data);
         })
     };
-    //
-    loadTweets();
+    // -> Loading the tweets in the databae
+    loadTweets()
     //
     
     $("#submissionForm").submit(function(event){
         const serial = $(this).serialize();
         event.preventDefault();
-        let countingNumber = $("textarea").val().length;;
+        let countingNumber = $("textarea").val().length;
            if(countingNumber > 140 || countingNumber <= 0) {
               return alert("Tweets must be between 1-140 characters!");
 
            }
         $.post("/tweets",serial,()=> {
-            console.log("nosuccess");
+            $(".tweets-container").prepend(loadTweets())
         })
     //
     });

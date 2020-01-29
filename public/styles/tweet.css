@@ -2,6 +2,7 @@
     border: 2px solid #545149;
     margin-top: 3em;
 }
+/* Top left and right elements of the tweet */
 .name {
     float:left;
     padding-top:0.5em;
@@ -12,32 +13,33 @@
     float:right;
     padding-top:0.5em;
     padding-right:0.5em;
-    color:#908b8b
+    color:lightsalmon
 }
+
+/* Hover on tweet effects and size of user icon */
+
 .hidden {
     visibility:hidden;
 }
 .tweet:hover .hidden{
     visibility:visible;
 }
-
 .tweet:hover {
-    box-shadow: 10px 10px 20px lightgrey;
+    box-shadow: 10px 10px 20px lightsalmon;
 }
-.usericon {
+.userIcon {
     height: 1em;
     width: 1em;
 }
-/* .socialContainer {
-    display:table;
-} */
+
+/*social media icons*/
 .socialWrapper {
     float:right;
-    margin: 0.5em;
-    height:1em;
-    width:1em;
+    margin: 0.2em;
+    height:1.5em;
+    width:1.5em;
 }
-
+/* the written text in the tweet */
 .tweetText{
     overflow:auto;
     display:block;
@@ -49,7 +51,7 @@
     width: 96%;
     border-bottom:2px solid #545149;
 }
-
+/* The "date created" */
 article footer div{
     text-align: left;
     margin: 1em;

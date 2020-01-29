@@ -39,6 +39,7 @@
 }
 
 .tweetText{
+    overflow:scroll;
     display:block;
     font-weight:600;
     height:2em;

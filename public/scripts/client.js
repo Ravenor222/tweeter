@@ -3,30 +3,6 @@
  * jQuery is already loaded
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
-const tweetObj = [
-    {
-      "user": {
-        "name": "Newton",
-        "avatars": "https://i.imgur.com/73hZDYK.png"
-        ,
-        "handle": "@SirIsaac"
-      },
-      "content": {
-        "text": "If I have seen further it is by standing on the shoulders of giants"
-      },
-      "created_at": 1461116232227
-    },
-    {
-      "user": {
-        "name": "Descartes",
-        "avatars": "https://i.imgur.com/nlhLi3I.png",
-        "handle": "@rd" },
-      "content": {
-        "text": "Je pense , donc je suis"
-      },
-      "created_at": 1461113959088
-    }
-]
 
 
 $(() => {
@@ -46,13 +22,48 @@ $(() => {
 
       </article>`
     }
+    //
+    
+    //
+  
     const renderTweets = (tweets) => {
-        for(const items of tweets) {
-            $('.tweets-container').prepend(createTweetElement(items));
-        }
+            for(const items of tweets) {
+                $('.tweets-container').prepend(createTweetElement(items));
+            }
     }
+    const loadTweets = () => {
+        $.get("/tweets", (data) => {
+            renderTweets(data);
+        })
+    };
+    //
+    loadTweets();
+    //
+    
+    $("#submissionForm").submit(function(event){
+        const serial = $(this).serialize();
+        event.preventDefault();
+        $.post("/tweets",serial,()=> {
+            console.log("siccess");
+        })
+    //
+    });
 
-   renderTweets(tweetObj)
+
+
+
+        // const $button = $('#subButton');
+        // $button.on('click', function () {
+        //     event.preventDefault();
+        //   console.log('Button clicked, performing ajax call...');
+
+        //   $.ajax('more-posts.html', { method: 'GET' })
+        //   .then(function (morePostsHtml) {
+        //     console.log('Success: ', morePostsHtml);
+        //     $button.replaceWith(morePostsHtml);
+        //   });
+        // });
+
 
 })
 

@@ -28,6 +28,15 @@
     height: 1em;
     width: 1em;
 }
+/* .socialContainer {
+    display:table;
+} */
+.socialWrapper {
+    float:right;
+    margin: 0.5em;
+    height:1em;
+    width:1em;
+}
 
 .tweetText{
     display:block;

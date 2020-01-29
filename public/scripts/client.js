@@ -18,6 +18,13 @@ $(() => {
         <p class="tweetText" >${tweetObj.content.text}</p>
 
         <footer>
+         
+         
+            <div class = "socialWrapper"><img src="/images/twitter.svg"></img></div>
+            <div class = "socialWrapper"><img src="/images/facebook.svg"></img></div>
+            <div class = "socialWrapper"><img src="/images/insta.svg"></img></div>
+            
+        
           <div class = "daysAgo">${tweetObj.created_at}</div>
         </footer>
 

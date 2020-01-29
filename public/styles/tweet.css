@@ -27,10 +27,11 @@
 .tweet:hover {
     box-shadow: 10px 10px 20px lightsalmon;
 }
-.userIcon {
-    height: 1em;
-    width: 1em;
-}
+ .userIcon {
+    height: 1.5em;
+    width: 1.5em;
+    float:left;
+} 
 
 /*social media icons*/
 .socialWrapper {

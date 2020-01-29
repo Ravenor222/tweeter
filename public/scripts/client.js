@@ -9,66 +9,84 @@
 $(() => {
 
     const createTweetElement= (tweetObj)=> {
+         const $avatar = $('<img>')
+         .addClass('userIcon')
+         .attr('src',tweetObj.user.avatars);
 
-        // const $avatar = $(<div></div>).text(tweetObj.user.avatars);
-        // const $username = $(<div></div>).text(tweetObj.user.name);
-        // const $userhandle = $().text(tweetObj.user.handle);
-        // const $contentText = $(<p></p>).text(tweetObj.content.text);
-        // const $footer = ();
-        // const $daysAgo = timeStamp(tweetObj.created_at);
+         const $name = $('<div>')
+         .text(tweetObj.user.name)
+         .addClass('name')
+         .append($avatar);
 
-        return `<article class = "tweet">
-        <header>
-          <div class = "name"><img class ="userIcon" src=${tweetObj.user.avatars}>  ${tweetObj.user.name}</div>
-          <div id = "hide" class = "username hidden">${tweetObj.user.handle}</div>
-        </header>
+         const $username = $('<div>')
+         .text(tweetObj.user.handle)
+         .addClass('username hidden');
 
-        <p class="tweetText" >${tweetObj.content.text}</p>
+         const $contentText = $('<p>')
+         .text(tweetObj.content.text)
+         .addClass('tweetText');
 
-        <footer>
-            <div class = "socialWrapper">
-                <a href="https://www.twitter.com">
-                    <img src="/images/twitter.svg"></img>
-                </a>
-            </div>
+         const $daysAgo = $('<div>')
+         .text(timeStamp(tweetObj.created_at))
+         .addClass('daysAgo');
 
-            <div class = "socialWrapper">
-                <a href="https://www.facebook.com">
-                    <img src="/images/facebook.svg"></img></a></div>
+         const socialBar = 
+         `<div class = "socialWrapper">
+            <a href="https://www.twitter.com">
+             <img src="/images/twitter.svg"></img>
+             </a>
+          </div>
 
-            <div class = "socialWrapper">
-                <a href="https://www.instagram.com">
-                    <img src="/images/insta.svg"></img>
-                </a>
-            </div>
+        <div class = "socialWrapper">
+            <a href="https://www.facebook.com">
+                <img src="/images/facebook.svg"></img>
+            </a>
+        </div>
 
-          <div class = "daysAgo">${timeStamp(tweetObj.created_at)}</div>
-        </footer>
+        <div class = "socialWrapper">
+          <a href="https://www.instagram.com">
+               <img src="/images/insta.svg"></img>
+          </a>
+        </div>`
 
-      </article>`
+         const $header = $('<header>')
+         .append($name, $username);
+
+         const $footer = $('<footer>')
+         .append(socialBar, $daysAgo);
+
+         const $article = $('<article>')
+         .addClass('tweet')
+         .append($header,$contentText ,$footer);
+
+        return $article;
+    //     
     }
     //
     
     //
     const timeStamp = (time) => {
-    
-         const today = new Date();
-         const day = new Date(time);
-         const daysAgo = today.getDate() - day.getDate();
-        
+         const today = Date.now();
+         const daysAgo = Math.floor(((today - time) / (1000 * 60 * 60)) / 24);
+
          if(daysAgo === 0) {
-             return "Posted Today";
+            return "Posted Today";
+
+         } else if (daysAgo === 1) {
+            return "Posted Yesterday";
+
          } else {
-             return `Posted ${today.getDate() - day.getDate()} days ago`
+            return `Posted ${daysAgo} days ago`
          }
     }
 
     const renderTweets = (tweets) => {
-            for(const items of tweets) {
-                $('.tweets-container').prepend(createTweetElement(items));
-            }
+        for(const items of tweets) {
+            $('.tweets-container').prepend(createTweetElement(items));
+        }
     }
     const loadTweets = () => {
+        $('.tweets-container').empty();
         $.get("/tweets", (data) => {
             renderTweets(data);
         })
@@ -87,6 +105,7 @@ $(() => {
            }
         $.post("/tweets",serial,()=> {
             $(".tweets-container").prepend(loadTweets())
+            $("#submissionForm")[0].reset();
         })
     //
     });

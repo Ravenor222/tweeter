@@ -34,7 +34,7 @@
 } 
 
 /*social media icons*/
-.socialWrapper {
+.socialWrapper i{
     float:right;
     margin: 0.2em;
     height:1.5em;

@@ -8,59 +8,53 @@
 
 $(() => {
 
-    const createTweetElement= (tweetObj)=> {
+    const createTweetElement= ({user: {avatars,name,handle}, content, created_at})=> {
          const $avatar = $('<img>')
          .addClass('userIcon')
-         .attr('src',tweetObj.user.avatars);
+         .attr('src',avatars);
 
          const $name = $('<div>')
-         .text(tweetObj.user.name)
+         .text(name)
          .addClass('name')
          .append($avatar);
 
          const $username = $('<div>')
-         .text(tweetObj.user.handle)
+         .text(handle)
          .addClass('username hidden');
 
          const $contentText = $('<p>')
-         .text(tweetObj.content.text)
+         .text(content.text)
          .addClass('tweetText');
 
          const $daysAgo = $('<div>')
-         .text(timeStamp(tweetObj.created_at))
+         .text(timeStamp(created_at))
          .addClass('daysAgo');
 
-         const socialBar = 
-         `<div class = "socialWrapper">
-            <a href="https://www.twitter.com">
-             <img src="/images/twitter.svg"></img>
-             </a>
-          </div>
+         const $socialHeart = $('<i>')
+         .addClass("fas fa-heart")
 
-        <div class = "socialWrapper">
-            <a href="https://www.facebook.com">
-                <img src="/images/facebook.svg"></img>
-            </a>
-        </div>
+         const $socialFlag = $('<i>')
+         .addClass("fas fa-flag")
 
-        <div class = "socialWrapper">
-          <a href="https://www.instagram.com">
-               <img src="/images/insta.svg"></img>
-          </a>
-        </div>`
+         const $socialRetweet = $('<i>')
+         .addClass("fas fa-retweet")
 
+         const $socialBar = $('<div>')
+         .addClass("socialWrapper")
+         .append($socialHeart, $socialFlag, $socialRetweet);
+         
          const $header = $('<header>')
          .append($name, $username);
 
          const $footer = $('<footer>')
-         .append(socialBar, $daysAgo);
+         .append($socialBar, $daysAgo);
 
          const $article = $('<article>')
          .addClass('tweet')
          .append($header,$contentText ,$footer);
 
         return $article;
-    //     
+
     }
     //
     

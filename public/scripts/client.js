@@ -37,6 +37,10 @@ $(() => {
          .text(handle)
          .addClass('user-name hidden');
 
+        //  const $flexBox =$('<div>')
+         //.addClass("username-block")
+        //  .append($name,$username)
+
          const $contentText = $('<p>')
          .text(content.text)
          .addClass('tweet-text');

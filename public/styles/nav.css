@@ -5,7 +5,8 @@ nav {
     background-color:#4056A1;
     top:0;
     z-index: 10;
-
+    display:flex;
+    justify-content:space-between;
     
 
 }

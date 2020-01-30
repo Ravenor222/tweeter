@@ -15,6 +15,10 @@
     padding-right:0.5em;
     color:lightsalmon
 }
+.username-block {
+    display:flex;
+    justify-content:space-between;
+}
 
 /* Hover on tweet effects and size of user icon */
 
@@ -27,6 +31,7 @@
 .tweet:hover {
     box-shadow: 10px 10px 20px lightsalmon;
 }
+/*position & size user*/
  .usericon {
     height: 1.5em;
     width: 1.5em;

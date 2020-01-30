@@ -90,10 +90,14 @@ $(() => {
     $("#submissionForm").submit(function(event){
         const serial = $(this).serialize();
         event.preventDefault();
-        let countingNumber = $("textarea").val().length;
+        //Validation 
+        let countingNumber = $(this).find('textarea').val().length;
            if(countingNumber > 140 || countingNumber <= 0) {
-              return alert("Tweets must be between 1-140 characters!");
-
+                return $("#error").slideDown(300);
+           } else {
+               $("#error").slideUp(300, function() {
+                   $('textarea').focus();
+               });
            }
         $.post("/tweets",serial,()=> {
             $(".tweets-container").prepend(loadTweets())

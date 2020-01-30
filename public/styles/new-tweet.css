@@ -1,5 +1,6 @@
 .new-tweet {
     display:none;
+    margin-top:2em;
 }
 
 main textarea{
@@ -28,4 +29,14 @@ main input {
     margin-top:0.25em;
 
 }
-
+#error {
+    border:solid 2px red;
+    margin-top:1em;
+    margin-bottom:2em;
+    padding:0.5em;
+    color:red;
+    display:none;
+}
+.fa-exclamation-triangle {
+    color:red;
+}

@@ -37,9 +37,9 @@ $(() => {
          .text(handle)
          .addClass('user-name hidden');
 
-        //  const $flexBox =$('<div>')
-         //.addClass("username-block")
-        //  .append($name,$username)
+         const $userFlexbox =$('<div>')
+         .addClass("username-flex")
+         .append($name,$username)
 
          const $contentText = $('<p>')
          .text(content.text)
@@ -61,12 +61,16 @@ $(() => {
          const $socialBar = $('<div>')
          .addClass("social-wrapper")
          .append($socialHeart, $socialFlag, $socialRetweet);
-         
+
+          const $footerFlexbox = $('<div>')
+         .addClass("footer-flex")
+         .append($daysAgo,$socialBar)
+
          const $header = $('<header>')
-         .append($name, $username);
+         .append($userFlexbox);
 
          const $footer = $('<footer>')
-         .append($socialBar, $daysAgo);
+         .append($footerFlexbox);
 
          const $article = $('<article>')
          .addClass('tweet')

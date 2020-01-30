@@ -4,20 +4,23 @@
 }
 /* Top left and right elements of the tweet */
 .name {
-    float:left;
     padding-top:0.5em;
     padding-left: 0.5em;
 }
 .user-name    {
-
-    float:right;
     padding-top:0.5em;
     padding-right:0.5em;
     color:lightsalmon
 }
-.username-block {
+/*username flexbox*/
+.username-flex {
     display:flex;
     justify-content:space-between;
+}
+.footer-flex {
+    display:flex;
+    justify-content:space-between;
+    margin:0;
 }
 
 /* Hover on tweet effects and size of user icon */
@@ -39,19 +42,20 @@
 } 
 
 /*social media icons*/
+.social-wrapper{
+    display:flex;
+    flex-direction:row;
+}
 .social-wrapper i{
-    float:right;
-    margin: 0.2em;
-    height:1.5em;
-    width:1.5em;
+    margin:0.5vw;
 }
 /* the written text in the tweet */
 .tweet-text{
     overflow:auto;
     display:block;
     font-weight:600;
-    height:2em;
-    margin-top:2.5em;
+    height:3rem;
+    margin-top:2.5rem;
     margin-left:2%;
     text-align:left;
     width: 96%;
@@ -60,7 +64,7 @@
 /* The "date created" */
 article footer div{
     text-align: left;
-    margin: 1em;
+    margin: 1rem;
     font-size: 12px;
 
 }

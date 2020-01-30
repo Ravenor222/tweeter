@@ -38,7 +38,7 @@ $(() => {
          .addClass('user-name hidden');
 
          const $userFlexbox =$('<div>')
-         .addClass("flex")
+         .addClass("flex text-view")
          .append($name,$username)
 
          const $contentText = $('<p>')
@@ -125,10 +125,12 @@ $(() => {
     //Makes the button appear after the header
     $(window).scroll(function(){
         if($(document).scrollTop() > 520){
+          $("#animated-button").css({'display': 'none'});
           $(".nav-text").css({'display': 'none'});
           $("#corner-button").css({"display": "block"})
           
         } else {
+          $("#animated-button").css({'display': 'block'});
           $(".nav-text").css({'display': 'block'});
           $("#corner-button").css({"display": "none"})
 
@@ -150,3 +152,12 @@ $(() => {
 
 })
 
+
+{/* <nav>
+<div class = "tweeter-logo">tweeter</div>
+
+<div class = "nav-text"><strong>Write</strong> a new Tweet
+  <button id ="animated-button" class = "down-arrow"><i class = "fas fa-angle-double-down"></i></button>
+</div>
+
+</nav> */}

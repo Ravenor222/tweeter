@@ -7,6 +7,7 @@
     padding-top:0.5em;
     padding-left: 0.5em;
 }
+
 .user-name    {
     padding-top:0.5em;
     padding-right:0.5em;
@@ -18,7 +19,7 @@
     display:flex;
     justify-content:space-between;
     margin:0;
-}
+}   
 
 /* Hover on tweet effects and size of user icon */
 
@@ -29,13 +30,13 @@
     visibility:visible;
 }
 .tweet:hover {
-    box-shadow: 10px 10px 20px lightsalmon;
+box-shadow: 10px 10px 20px lightsalmon;
 }
 /*position & size user*/
  .usericon {
     height: 1.5em;
     width: 1.5em;
-    float:left;
+     float:left; 
 } 
 
 /*social media icons*/
@@ -64,4 +65,25 @@ article footer div{
     margin: 1rem;
     font-size: 12px;
 
+}
+
+
+/* DESKTOP */
+@media only screen and (min-width:1024px) {
+    .text-view {
+        width:59vw;
+    }
+    
+}
+/* MOBILE */
+@media only screen and (max-width:415px) {
+    .tweet-text {
+        margin-top:20px;
+    }
+    .name {
+        font-size:0.7em;
+    }
+    .user-name {
+        font-size: 0.7em;
+    }
 }

@@ -17,3 +17,14 @@
 header div h2{
     margin-top: -0.5em;
 }
+
+@media only screen and (min-width:1024px) {
+    header {
+        float:left;
+        width:33%;
+    }
+    .header-div {
+         margin-top:6vw;
+        margin-left:2vw; 
+    }
+}

@@ -7,7 +7,7 @@
 
 
 $(() => {
-
+    //the generation of the tweet html/ classes
     const createTweetElement= ({user: {avatars,name,handle}, content, created_at})=> {
          const $avatar = $('<img>')
          .addClass('userIcon')
@@ -84,13 +84,13 @@ $(() => {
             renderTweets(data);
         })
     };
-    // -> Loading the tweets in the databae
+    // -> Loading the tweets in the database
     loadTweets()
-    //
+    // -> Tweet generation -> 
     $("#submissionForm").submit(function(event){
         const serial = $(this).serialize();
         event.preventDefault();
-        //Validation 
+        //Validation of the tweet form
         let countingNumber = $(this).find('textarea').val().length;
            if(countingNumber > 140 || countingNumber <= 0) {
                 return $("#error").slideDown(300);
@@ -99,6 +99,7 @@ $(() => {
                    $('textarea').focus();
                });
            }
+        //post to the server with the tweet, and the number of characters of text
         $.post("/tweets",serial,()=> {
             $(".tweets-container").prepend(loadTweets())
             $("#submissionForm")[0].reset();
@@ -106,13 +107,13 @@ $(() => {
         })
     //
     });
-
+    //the new tweet toggle
     $("#animatedButton").click(()=>{
         $(".new-tweet").slideToggle(400, function() {
             $(this).find("textarea").focus();
         });
     })
-
+    //Makes the button appear after the header
     $(window).scroll(function(){
         if($(document).scrollTop() > 520){
           $(".navText").css({'display': 'none'});
@@ -124,7 +125,7 @@ $(() => {
 
         }
     });
-
+    //sends you to the top of the page and opens a new tweet.
     $('#cornerButton').click(() => {
         window.scrollTo({
             top: 0,
@@ -136,18 +137,6 @@ $(() => {
        });
        //$("textarea").focus();
     })
-
-        // const $button = $('#subButton');
-        // $button.on('click', function () {
-        //     event.preventDefault();
-        //   console.log('Button clicked, performing ajax call...');
-
-        //   $.ajax('more-posts.html', { method: 'GET' })
-        //   .then(function (morePostsHtml) {
-        //     console.log('Success: ', morePostsHtml);
-        //     $button.replaceWith(morePostsHtml);
-        //   });
-        // });
 
 
 })

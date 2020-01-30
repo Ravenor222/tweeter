@@ -53,11 +53,16 @@
         <div id = "error">
           <i class="fas fa-exclamation-triangle"></i>Tweets must be between 1 - 140 characters!<i class="fas fa-exclamation-triangle"></i>
         </div>
+
       <form id="submission-form" action = "/tweets" >
         <textarea name="text" placeholder="What are you humming about?"></textarea>
-        <input type="submit" value="Tweet">
-        <span class="counter">140</span>
+
+       <div class = "flex"> 
+         <input type="submit" value="Tweet">
+         <span class="counter">140</span>
+       </div>
       </form>
+
     </section>
 
     <button id = "corner-button"><i class="fas fa-angle-double-up"></i></button>

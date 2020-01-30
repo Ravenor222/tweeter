@@ -38,7 +38,7 @@ $(() => {
          .addClass('user-name hidden');
 
          const $userFlexbox =$('<div>')
-         .addClass("username-flex")
+         .addClass("flex")
          .append($name,$username)
 
          const $contentText = $('<p>')
@@ -63,7 +63,7 @@ $(() => {
          .append($socialHeart, $socialFlag, $socialRetweet);
 
           const $footerFlexbox = $('<div>')
-         .addClass("footer-flex")
+         .addClass("flex")
          .append($daysAgo,$socialBar)
 
          const $header = $('<header>')

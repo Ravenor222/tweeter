@@ -13,11 +13,8 @@
     color:lightsalmon
 }
 /*username flexbox*/
-.username-flex {
-    display:flex;
-    justify-content:space-between;
-}
-.footer-flex {
+
+.flex {
     display:flex;
     justify-content:space-between;
     margin:0;

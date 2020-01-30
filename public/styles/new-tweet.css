@@ -16,12 +16,10 @@ main textarea{
 }
 
 .counter {
-    float:right;
     font-family: Bungee;
 }
 /*tweet button*/
 main input {
-    float: left;
     color: white;
     background-color:#4056A1;
     font-family: Bungee;

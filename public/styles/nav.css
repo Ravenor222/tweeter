@@ -13,5 +13,50 @@ nav {
 .navBarSpan{
     font-family: 'Bungee', sans-serif;
     color: #FFFFFF;
-    margin: 1.5em;
+    margin: 1em;
+    font-size: 1.5em;
+}
+.navText {
+    float:right;
+    margin:1.5em;
+   color:white;
+   position:relative;
+}
+.downArrow {
+    background:transparent;
+    border: 0;
+    color:lightsalmon;
+    position:absolute;
+    top:40px;
+    right: 75px;
+}
+.downArrow:hover {
+    animation: bounce 1s infinite alternate;
+}
+
+#cornerButton {
+    position: fixed;
+    left: 90%;
+    bottom: 1%;
+    border-radius: 100%;
+    border:0;
+    height: 70px;
+    width: 70px;
+    background-color: red;
+    color: white;
+    margin: 1em;
+    display: none;
+  }
+
+#cornerButton:hover {
+    animation: bounce 1s infinite alternate;
+}
+
+@keyframes bounce {
+    from {
+        transform:translateY(0px);
+    } 
+    to {
+        transform:translateY(-15px);
+        }
 }

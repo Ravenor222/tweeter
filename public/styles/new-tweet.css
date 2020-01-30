@@ -1,3 +1,7 @@
+.new-tweet {
+    display:none;
+}
+
 main textarea{
     outline: 0;
     border: 0;

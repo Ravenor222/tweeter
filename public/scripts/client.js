@@ -57,8 +57,6 @@ $(() => {
 
     }
     //
-    
-    //
     const timeStamp = (time) => {
          const today = Date.now();
          const daysAgo = Math.floor(((today - time) / (1000 * 60 * 60)) / 24);
@@ -73,12 +71,13 @@ $(() => {
             return `Posted ${daysAgo} days ago`
          }
     }
-
+    //
     const renderTweets = (tweets) => {
         for(const items of tweets) {
             $('.tweets-container').prepend(createTweetElement(items));
         }
     }
+    //
     const loadTweets = () => {
         $('.tweets-container').empty();
         $.get("/tweets", (data) => {
@@ -88,7 +87,6 @@ $(() => {
     // -> Loading the tweets in the databae
     loadTweets()
     //
-    
     $("#submissionForm").submit(function(event){
         const serial = $(this).serialize();
         event.preventDefault();
@@ -100,12 +98,40 @@ $(() => {
         $.post("/tweets",serial,()=> {
             $(".tweets-container").prepend(loadTweets())
             $("#submissionForm")[0].reset();
+            $('.counter').text(140);
         })
     //
     });
 
+    $("#animatedButton").click(()=>{
+        $(".new-tweet").slideToggle(400, function() {
+            $(this).find("textarea").focus();
+        });
+    })
 
+    $(window).scroll(function(){
+        if($(document).scrollTop() > 520){
+          $(".navText").css({'display': 'none'});
+          $("#cornerButton").css({"display": "block"})
+          
+        } else {
+          $(".navText").css({'display': 'block'});
+          $("#cornerButton").css({"display": "none"})
 
+        }
+    });
+
+    $('#cornerButton').click(() => {
+        window.scrollTo({
+            top: 0,
+            left: 0,
+            behavior: 'smooth'
+          });
+       $(".new-tweet").slideDown(800, () => {
+           $('textarea').focus()
+       });
+       //$("textarea").focus();
+    })
 
         // const $button = $('#subButton');
         // $button.on('click', function () {

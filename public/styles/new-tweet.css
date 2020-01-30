@@ -19,6 +19,7 @@ main textarea{
     float:right;
     font-family: Bungee;
 }
+/*tweet button*/
 main input {
     float: left;
     color: white;
@@ -29,6 +30,7 @@ main input {
     margin-top:0.25em;
 
 }
+/*the error box after invalid tweet attempt*/
 #error {
     border:solid 2px red;
     margin-top:1em;

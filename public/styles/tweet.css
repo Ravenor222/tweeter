@@ -8,7 +8,7 @@
     padding-top:0.5em;
     padding-left: 0.5em;
 }
-.username    {
+.user-name    {
 
     float:right;
     padding-top:0.5em;
@@ -27,21 +27,21 @@
 .tweet:hover {
     box-shadow: 10px 10px 20px lightsalmon;
 }
- .userIcon {
+ .usericon {
     height: 1.5em;
     width: 1.5em;
     float:left;
 } 
 
 /*social media icons*/
-.socialWrapper i{
+.social-wrapper i{
     float:right;
     margin: 0.2em;
     height:1.5em;
     width:1.5em;
 }
 /* the written text in the tweet */
-.tweetText{
+.tweet-text{
     overflow:auto;
     display:block;
     font-weight:600;

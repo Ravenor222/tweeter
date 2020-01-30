@@ -28,23 +28,23 @@
   <body>
     <!-- Top nav bar (fixed) -->
     <nav>
-      <div class = "navText"><strong>Write</strong> a new Tweet
-        <button id ="animatedButton" class = "downArrow"><i class = "fas fa-angle-double-down"></i>
+      <div class = "nav-text"><strong>Write</strong> a new Tweet
+        <button id ="animated-button" class = "down-arrow"><i class = "fas fa-angle-double-down"></i>
         </button>
       </div>
       
       
-      <div class = "navBarSpan">tweeter</div>
+      <div class = "tweeter-logo">tweeter</div>
     </nav>
 
     <header>
-    <div class = "headerDiv">
+    <div class = "header-div">
       <div>
           <img class = "img" src="/images/profile-hex.png"> 
       </div>
       <br>
       <div>
-          <h2>Billy Irish</h2>
+          <h2>Nick Danvers</h2>
       </div>
     </div>
   </header> 
@@ -53,18 +53,16 @@
     <main class="container">
       <section class="new-tweet">
         <div id = "error">
-          <i class="fas fa-exclamation-triangle"></i>
-            Tweets must be between 1 - 140 characters!
-          <i class="fas fa-exclamation-triangle"></i>
+          <i class="fas fa-exclamation-triangle"></i>Tweets must be between 1 - 140 characters!<i class="fas fa-exclamation-triangle"></i>
         </div>
-      <form id="submissionForm" action = "/tweets" >
+      <form id="submission-form" action = "/tweets" >
         <textarea name="text" placeholder="What are you humming about?"></textarea>
         <input type="submit" value="Tweet">
         <span class="counter">140</span>
       </form>
     </section>
 
-    <button id = "cornerButton"><i class="fas fa-angle-double-up"></i></button>
+    <button id = "corner-button"><i class="fas fa-angle-double-up"></i></button>
 
     <section class = "tweets-container">
       <!-- <article class = "tweet">

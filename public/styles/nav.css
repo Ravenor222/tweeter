@@ -10,19 +10,19 @@ nav {
 
 }
 
-.navBarSpan{
+.tweeter-logo{
     font-family: 'Bungee', sans-serif;
     color: #FFFFFF;
     margin: 1em;
     font-size: 1.5em;
 }
-.navText {
+.nav-text {
     float:right;
     margin:1.5em;
    color:white;
    position:relative;
 }
-.downArrow {
+.down-arrow {
     background:transparent;
     border: 0;
     color:lightsalmon;
@@ -30,11 +30,11 @@ nav {
     top:40px;
     right: 75px;
 }
-.downArrow:hover {
+.down-arrow:hover {
     animation: bounce 1s infinite alternate;
 }
 
-#cornerButton {
+#corner-button {
     position: fixed;
     left: 90%;
     bottom: 1%;
@@ -48,7 +48,7 @@ nav {
     display: none;
   }
 
-#cornerButton:hover {
+#corner-button:hover {
     animation: bounce 1s infinite alternate;
 }
 

@@ -6,19 +6,15 @@
  */
 html {
   box-sizing: border-box;
+  background-image: url("../images/old_wall.png");
 }
 *, *:before, *:after {
   box-sizing: inherit;
 }
 
-/*
- * Global layout stuff
- */
-
 body {
   font-family: 'Source Sans Pro', sans-serif;
   color: #545149;
-  background-color: #f4f1ec;
   font-size: 24px;
   margin:0;
   padding-top:120px;
@@ -30,23 +26,17 @@ main {
   margin-right: 5%;
   text-align:center;
 }
-
-
-/*
- * Additional CSS can be defined below or in other CSS files, as per instructions
- */
+ /* DESKTOP */
  @media only screen and (min-width:1024px) {
    main.container {
      width:60%;
      float:right;
      margin-left:2%;
      margin-right:2%;
-
    }
-
-
  }
- @media only screen and (max-width:700px) {
+ /* MOBILE */
+ @media only screen and (max-width:500px) {
   body {
     padding: 0;
   }

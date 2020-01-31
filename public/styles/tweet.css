@@ -1,6 +1,8 @@
+/* the individual tweet containers */
 .tweet {
-    border: 2px solid #545149;
+    border: 5px solid #545149;
     margin-top: 3em;
+    background-color:white;
 }
 /* Top left and right elements of the tweet */
 .name {
@@ -13,7 +15,6 @@
     padding-right:0.5em;
     color:lightsalmon
 }
-/*username flexbox*/
 
 .flex {
     display:flex;
@@ -22,7 +23,6 @@
 }   
 
 /* Hover on tweet effects and size of user icon */
-
 .hidden {
     visibility:hidden;
 }
@@ -32,6 +32,7 @@
 .tweet:hover {
 box-shadow: 10px 10px 20px lightsalmon;
 }
+
 /*position & size user*/
  .usericon {
     height: 1.5em;
@@ -57,7 +58,7 @@ box-shadow: 10px 10px 20px lightsalmon;
     margin-left:2%;
     text-align:left;
     width: 96%;
-    border-bottom:2px solid #545149;
+    border-bottom:5px solid #545149;
 }
 /* The "date created" */
 article footer div{
@@ -76,7 +77,7 @@ article footer div{
     
 }
 /* MOBILE */
-@media only screen and (max-width:415px) {
+@media only screen and (max-width:500px) {
     .tweet-text {
         margin-top:20px;
     }

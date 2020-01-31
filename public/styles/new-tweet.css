@@ -8,10 +8,10 @@ main textarea{
     border: 0;
     border-bottom: 2px solid #545149;
     color : #545149;
-    background-color:#f4f1ec;
     width: 100%;
     font-weight:600;
     height:1.75em;
+    background-image: url("../images/old_wall.png");
 
 }
 

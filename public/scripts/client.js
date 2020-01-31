@@ -1,13 +1,5 @@
-
-/*
- * Client-side JS logic goes here
- * jQuery is already loaded
- * Reminder: Use (and do all your DOM work in) jQuery's document ready function
- */
-
-
 $(() => { 
-    //
+    //Turning the UNIX unicode time into legible time
     const timeStamp = (time) => {
          const today = Date.now();
          const daysAgo = Math.floor(((today - time) / (1000 * 60 * 60)) / 24);
@@ -151,13 +143,3 @@ $(() => {
 
 
 })
-
-
-{/* <nav>
-<div class = "tweeter-logo">tweeter</div>
-
-<div class = "nav-text"><strong>Write</strong> a new Tweet
-  <button id ="animated-button" class = "down-arrow"><i class = "fas fa-angle-double-down"></i></button>
-</div>
-
-</nav> */}

@@ -4,6 +4,7 @@
     text-align:center;
     background-color: #ffa07a;
     background-image: url("https://www.transparenttextures.com/patterns/transparent-square-tiles.png");    
+    
 }
 
 .img{
@@ -17,7 +18,7 @@
 header div h2{
     margin-top: -0.5em;
 }
-
+/* DESKTOP */
 @media only screen and (min-width:1024px) {
     header {
         float:left;
@@ -26,5 +27,6 @@ header div h2{
     .header-div {
          margin-top:6vw;
         margin-left:2vw; 
+        border:5px solid #545149;
     }
 }

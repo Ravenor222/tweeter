@@ -77,26 +77,26 @@ nav {
      
     }
     .tweeter-logo {
-        font-size: 1em;
+    font-size: 1em;
     }
     .nav-text {
-        font-size:0.6em;
+    font-size:0.6em;
     }
     .down-arrow {
-        top:10vw;
-        right:18vw;
-        color:white;
+    top:10vw;
+    right:18vw;
+    color:white;
     }
     #corner-button {
-        left:70vw;
-        bottom:1vw;
+    left:70vw;
+    bottom:1vw;
 
     }
 }
 /* TABLET */
 @media only screen and (min-width: 501px) and (max-width: 1023px) {
     #corner-button {
-        left:85vw;
-        bottom:1vw
+    left:85vw;
+    bottom:1vw
     }
 }

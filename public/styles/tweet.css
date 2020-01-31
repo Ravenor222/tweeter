@@ -72,19 +72,19 @@ article footer div{
 /* DESKTOP */
 @media only screen and (min-width:1024px) {
     .text-view {
-        width:59vw;
+    width:59vw;
     }
     
 }
 /* MOBILE */
 @media only screen and (max-width:500px) {
     .tweet-text {
-        margin-top:20px;
+    margin-top:20px;
     }
     .name {
-        font-size:0.7em;
+    font-size:0.7em;
     }
     .user-name {
-        font-size: 0.7em;
+    font-size: 0.7em;
     }
 }

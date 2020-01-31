@@ -2,6 +2,16 @@
 
 Tweeter is a simple, single-page Twitter clone, write some tweets and see them come up!
 
+## Images
+
+!["Homepage"](https://github.com/Ravenor222/tweeter/blob/master/public/images/homepage.png?raw=true)
+<!---->
+!["'home' page with URLS"](https://github.com/Ravenor222/tweeter/blob/master/public/images/new-tweet.png?raw=true)
+<!---->
+!["'home' page with URLS"](https://github.com/Ravenor222/tweeter/blob/master/public/images/ipad-view.png?raw=true)
+<!---->
+!["'home' page with URLS"](https://github.com/Ravenor222/tweeter/blob/master/public/images/homepage.png?raw=true)
+
 ## Getting Started
 
 1. Clone this repository.

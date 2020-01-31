@@ -78,7 +78,7 @@ $(() => {
       $('.tweets-container').prepend(createTweetElement(items));
     }
   };
-  //get tweets from the server, uses renderTweets to parse the array and add it to the
+  //get tweets from the server, uses renderTweets to parse the array and prepends it to the page
   const loadTweets = () => {
     $('.tweets-container').empty();
     $.get("/tweets", (data) => {

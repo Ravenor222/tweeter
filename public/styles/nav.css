@@ -66,16 +66,7 @@ nav {
         }
 }
 
-/* DESKTOP */
-@media only screen and (min-width:1024px) {
-}
-/* TABLET */
-@media only screen and (min-width:501) and (max-width:1023px) {
-    #corner-button {
-        left:85vw;
-        bottom:1vw
-    }
-}
+
 
 /* MOBILE */
 @media only screen and (max-width:500px) {
@@ -101,5 +92,11 @@ nav {
         bottom:1vw;
 
     }
-
+}
+/* TABLET */
+@media only screen and (min-width: 501px) and (max-width: 1023px) {
+    #corner-button {
+        left:85vw;
+        bottom:1vw
+    }
 }

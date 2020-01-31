@@ -6,9 +6,9 @@ Tweeter is a simple, single-page Twitter clone, write some tweets and see them c
 
 !["Homepage"](https://github.com/Ravenor222/tweeter/blob/master/public/images/homepage.png?raw=true)
 <!---->
-!["'home' page with URLS"](https://github.com/Ravenor222/tweeter/blob/master/public/images/new-tweet.png?raw=true)
+!["new tweet box"](https://github.com/Ravenor222/tweeter/blob/master/public/images/new-tweet.png?raw=true)
 <!---->
-!["'home' page with URLS"](https://github.com/Ravenor222/tweeter/blob/master/public/images/mobile&ipad.png?raw=true)
+!["mobile and ipad view"](https://github.com/Ravenor222/tweeter/blob/master/public/images/mobile&ipad.png?raw=true)
 
 ## Getting Started
 

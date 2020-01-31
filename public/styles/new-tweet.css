@@ -2,7 +2,7 @@
     display:none;
     margin-top:2rem;
 }
-
+/*The new tweet text form*/
 main textarea{
     outline: 0;
     border: 0;
@@ -14,11 +14,11 @@ main textarea{
     background-image: url("../images/old_wall.png");
 
 }
-
+/* the character counter */
 .counter {
     font-family: Bungee;
 }
-/*tweet button*/
+/*new-tweet submit button*/
 main input {
     color: white;
     background-color:#4056A1;

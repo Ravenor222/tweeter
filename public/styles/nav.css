@@ -7,40 +7,37 @@ nav {
     z-index: 10;
     display:flex;
     justify-content:space-between;
-    
-
 }
-
 .column-flex {
     display:flex;
     flex-direction:column;
 }
+
+/* the nav bar */
 .tweeter-logo{
     font-family: 'Bungee', sans-serif;
     color: #FFFFFF;
     margin: 2.5vw;
     font-size: 1.5em;
 }
-/* .toggle-tweet{
-   
-    color:white;
-} */
 .nav-text {
    margin:2.5vw;
    margin-bottom:0.5vw;
    color:white;
    position:relative;
-}
+} 
+
+/* arrow at the top right of the screen */
 .down-arrow {
     background:transparent;
     border: 0;
     color:lightsalmon;
-   
 }
 .down-arrow:hover {
     animation: bounce 1s infinite alternate;
 }
-/* 90left bottom 1 */
+
+/* button appearing after scroll down */
 #corner-button {
     position: fixed;
     left: 90vw; 
@@ -49,12 +46,13 @@ nav {
     border:0;
     height: 70px;
     width: 70px;
-    background-color: red;
+    background-color: lightsalmon;
     color: white;
     margin: 1em;
     display: none;
   }
 
+/* Bouncing button animation */
 #corner-button:hover {
     animation: bounce 1s infinite alternate;
 }
